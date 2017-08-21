@@ -1,0 +1,43 @@
+2017-06-27 13:35:04 [DEBUG] org.apache.http.client.protocol.RequestAddCookies: CookieSpec selected: default 
+2017-06-27 13:35:04 [DEBUG] org.apache.http.client.protocol.RequestAuthCache: Auth cache not set in the context 
+2017-06-27 13:35:04 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager: Connection request: [route: {}->http://192.168.245.194:9080][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2017-06-27 13:35:04 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager: Connection leased: [id: 0][route: {}->http://192.168.245.194:9080][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2017-06-27 13:35:04 [DEBUG] org.apache.http.impl.execchain.MainClientExec: Opening connection {}->http://192.168.245.194:9080 
+2017-06-27 13:35:04 [DEBUG] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator: Connecting to /192.168.245.194:9080 
+2017-06-27 13:35:05 [DEBUG] org.apache.http.impl.conn.DefaultManagedHttpClientConnection: http-outgoing-0: Shutdown connection 
+2017-06-27 13:35:05 [DEBUG] org.apache.http.impl.execchain.MainClientExec: Connection discarded 
+2017-06-27 13:35:05 [DEBUG] org.apache.http.impl.conn.DefaultManagedHttpClientConnection: http-outgoing-0: Close connection 
+2017-06-27 13:35:05 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager: Connection released: [id: 0][route: {}->http://192.168.245.194:9080][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2017-06-27 13:35:05 [ERROR] org.apache.commons.logging.Log: send error 
+org.apache.http.conn.HttpHostConnectException: Connect to 192.168.245.194:9080 [/192.168.245.194] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.adcc.tool.msgCenter.view.ASGSMainShell$1.widgetSelected(ASGSMainShell.java:94)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(Unknown Source)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(Unknown Source)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Unknown Source)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Unknown Source)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Unknown Source)
+	at com.adcc.tool.msgCenter.APP.main(APP.java:18)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 16 more
+2017-06-27 13:36:09 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager: Connection manager is shutting down 
+2017-06-27 13:36:09 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager: Connection manager shut down 

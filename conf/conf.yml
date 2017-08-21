@@ -1,0 +1,2 @@
+# restful setting
+AOMIPAdapterUrl: http://192.168.245.194:9080/aomip/flightMsg/receiveXmlMsg  
